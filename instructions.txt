@@ -1,1 +1,1 @@
-Use this repository to upload the solutions to  exercises given.
+Use this repository to upload your solutions to the given exercises.
