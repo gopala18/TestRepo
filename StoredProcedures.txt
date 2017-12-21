@@ -1,0 +1,52 @@
+create table Mobile(IEMI int,model varchar(20),brand varchar(20),cost decimal(10,2))
+
+
+CREATE OR REPLACE FUNCTION INSERTMOBILE(IEMI int,model varchar(20),brand varchar(20),cost decimal(10,2))
+RETURNS BOOLEAN AS $insertFlag$
+DECLARE flag BOOLEAN;
+BEGIN
+
+	INSERT INTO Mobile VALUES(IEMI,model,brand,cost);
+	flag=true;
+        RETURN flag;
+END;
+$insertFlag$  LANGUAGE plpgsql
+
+select insertmobile(12345,'k5','lenovo',15000.00);
+
+
+==================================================================
+--drop function DELETEMOBILE(INT)
+
+CREATE OR REPLACE FUNCTION DELETEMOBILE(IEMI_No int)
+RETURNS BOOLEAN AS $deleteFlag$
+DECLARE flag BOOLEAN;
+BEGIN
+
+	DELETE FROM Mobile WHERE IEMI=IEMI_no;
+	flag=true;
+        RETURN flag;
+END;
+$deleteFlag$  LANGUAGE plpgsql
+
+
+
+SELECT DELETEMOBILE(1234);
+
+==================================================================
+
+
+
+CREATE OR REPLACE FUNCTION UPDATEMOBILE(IEMI_No int,updatedModel varchar(20),updatedBrand varchar(20),updatedCost decimal(10,2))
+RETURNS BOOLEAN AS $updateFlag$
+DECLARE flag BOOLEAN;
+BEGIN
+
+	UPDATE Mobile SET model=updatedModel,brand=updatedBrand,cost=updatedCost WHERE IEMI=IEMI_No;
+	flag=true;
+        RETURN flag;
+END;
+$updateFlag$  LANGUAGE plpgsql
+
+
+select updatemobile(12345,'k6','Lenovo',18000.00)
