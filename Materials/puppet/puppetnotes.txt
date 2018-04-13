@@ -1,0 +1,108 @@
+sudo bash
+
+wget https://apt.puppetlabs.com-puppetlabs-release-trusty.deb
+
+dpkg -i puppetlabs-release-trusty.deb
+
+apt-get update
+
+apt-get install puppetmaster
+
+service start puppetmaster
+resource puppetmaster service
+resource puppetmaster service enabled=true
+resource puppetmaster service enabled=running
+
+puppet help
+
+puppet cert list
+{all certificates signed}
+
+puppet cert list --all
+ {signed & pending cert requests}
+ 
+ vi /etc/puppet/puppet.conf
+ 
+ gedit /etc/puppet/puppet.conf
+ 
+ [main]
+ #
+ #
+ #
+ #
+ [master]
+ name=puppetmaster
+ alt_dnsnames=com.htc.puppetmaster
+ cert=puppet
+ 
+ :g/^$/d
+ :wq
+ 
+ ==============================================================
+ on agent
+ 
+ wget https://apt.puppetlabs.com-puppetlabs-release-trusty.deb
+ dpkg -i puppetlabs-release-trusty.deb
+
+apt-get update
+
+apt-get install puppet
+
+ vi /etc/puppet/puppet.conf
+ [main]
+ [agent]
+ :wq
+ 
+ 
+ ping com.htc.puppetmaster
+ vi /etc/hosts
+ 
+ 172.16.51.233 puppetmaster
+ 172.16.51.112        localhost
+ 
+ puppet agent -t
+ {first create its own cert and send to master}
+ creating ssl
+ exiting no certificate fond
+ ===========
+ goto master
+ 
+ ============
+ puppet cert list --all
+ puppet cert sign puppetagent
+ ==================
+ 
+ goto agent
+ ===========
+puppet agent -t
+{scanning environment production
+applying snapshot
+info:creating file
+finished}
+
+
+/etc/code/production/newfolder
+
+manifest
+----------
+site.pp{apply for all agents}
+node.pp{apply for specific agent}
+classes
+class newfile{
+file{
+<filename>:
+ensure=>true
+source=>loaction of file in master
+}}
+
+
+
+include newfile
+ 
+ 
+ 
+ 
+
+
+ 
+ 

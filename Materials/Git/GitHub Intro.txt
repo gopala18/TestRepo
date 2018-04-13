@@ -1,0 +1,74 @@
+Traditional way of organizing data or project--->local disk / folder
+in case we need a previous code 
+
+
+example:
+EmployeeManagement
+Employee
+EmployeeServiceProvider
+Company
+CompanyServiceProvider
+Utility---> removed after completion of project
+EmployeeNotFoundException
+
+
+after few days that Utility class is necessary
+
+
+Git->saving and retriving data by versioning mechanism
+
+GitHub   
+Git
+GitLab
+
+
+Latest way of organizing data ---> in a online repository or a cloud repository
+
+Every upload or every update done in project will have a seperate version
+
+Manual Commit
+Auto Sync
+
+
+Real time Development:
+
+design --------->Code----->test--->integration--->deploy
+Login-->Logic---->Testcase--->combine new page with application--->test the working condition of project
+
+Branching:
+
+master-->original
+Production-->Sayooj and gopi will edit the file at the same time
+
+Data collision problem
+User-->Sayooj
+Admin-->Gopi
+
+Gopi-->line 3 to 30 some logic
+Sayooj---> 25 to 70 some logic
+
+line 25 to 30 whose code will be updated.???
+
+Github handles this situation with the first commited code.
+
+1. if Gopi committed his code before Sayooj :
+	Gopi's code will be reflected in the file and a new version will be created.
+2. now if Sayooj committed There will be an error (Saying updating the same line already committed by Gopi)
+ Please checkout the latest version to update your code.
+now Sayooj will update 31 to 90 lines
+
+
+Staging-->pre deployment version of project
+deployed--->Completed code.
+
+
+
+
+
+
+
+
+
+
+
+

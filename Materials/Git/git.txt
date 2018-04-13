@@ -1,0 +1,67 @@
+
+Upload
+Navigate to folder wer pjt is located
+C:\Git\SayGit> 
+		
+		git init
+		
+		
+		git add .
+		
+		git commit -m "First Commit"
+		
+		git remote rm origin 
+		
+		git remote add origin https://github.com/HTCTraining/MavenSpringMVCsay.git
+        
+		git remote -v
+	
+       	git push origin master --force
+
+
+
+Download
+________________________________________________________________________
+
+Navigate to folder wer pjt needs to be saved
+        
+		git clone https://github.com/HTCTraining/MavenSpringMVC.git
+
+
+		git remote add origin 					https://github.com/HTCTraining/MavenSpringMVC.git
+
+		git pull origin ThirdCommit
+
+
+
+
+
+
+
+git checkout <commit_id>
+git reflog
+
+git checkout HEAD@{...}
+
+
+
+git reset HEAD --hard <commit_id>
+
+If any uncommited wrok is der.
+
+git stash
+git reset --hard 0d1d7fc32
+git stash pop
+
+
+git checkout -b <new branch> <commit_id>
+git checkout HEAD~X // x is the number of commits t go back
+This will checkout new branch pointing to the desired commit
+
+
+Another way to get to the deleted commit is with the git fsck command.
+git fsck –lost-found
+
+git merge xyz
+
+git gc

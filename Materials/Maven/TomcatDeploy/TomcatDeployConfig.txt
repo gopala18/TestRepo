@@ -1,0 +1,69 @@
+Maven Tomcat plugin   ---> tomcat7
+
+Add the plugin to POM.xml
+
+<plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.3-SNAPSHOT</version>
+        <configuration>
+
+	  <url>http://localhost:8080/manager/text</url>  
+	  <server>Tomcat7</server>   
+	  <username>gopi</username>  
+	  <password>123Welcome</password>
+          <warFile>target/warFileName.war</warFile>
+        
+    </configuration>
+</plugin>
+
+
+======================
+
+Tocat directory/conf/tomcat-users.xml
+
+
+<roles name="admin"/>
+<roles name="manager-gui"/>
+<roles name="manager-script"/>
+<users username="gopim" password="123Welcome" roles="admin,manager-script,manager-gui"/>
+
+=============================
+
+Mavn directory/conf/settings.xml
+
+<servers>
+   <server>
+	<id>Tomcat7</id>
+	<username>gopim</username>
+	<password>123Welcome</password>
+   </server> 
+</servers>
+
+=======================
+
+COMMANDS:
+
+mvn tomcat7:deploy
+mvn tomcat7:undeploy
+mvn tomcat7:redeploy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+Build Tools
+__________
+
+
+C--->Make -->1976-->unix
+Java--->ANT (Another Neat Tool) --> 2000
+Java--->Maven-->2004
+
+Java--->Gradle--->2007 -->class
+
+Build Life cycle
+
+ 1  validate
+ 2  generate-sources
+ 3  process-sources
+ 4  generate-resources
+ 5  process-resources
+ 6  compile
+ 7  process-test-sources
+ 8  process-test-resources
+ 9  test-compile
+10  test
+11  package
+12  install
+13  deploy
+
+
+Features of Maven
+
+Simple project setup that follows best practices.
+Dependency management including automatic updating
+Release management and distribution publication
+Backward Compatibility
+Parallel builds
+
+
+
+Maven provides developers ways to manage the following -
+
+Builds
+Documentation
+Reporting
+Dependencies
+SCMs
+Releases
+Distribution
+Mailing list
+
+Maven Goals
+__________
+
+mvn archetype:generate 
+-DgroupId = com.companyname.bank 
+-DartifactId = consumerBanking 
+-DarchetypeArtifactId = maven-archetype-quickstart 
+-DinteractiveMode = false
+
+mvn clean 
+Compile
+test
+Package
+install
+build
+site
+deploy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

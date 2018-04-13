@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="university"   default="deploy"   basedir=".">
+
+	<property name="src.dir" value="src" />
+	<property name="web.dir" value="WebContent" />
+	<property name="build.dir" value="${web.dir}/WEB-INF/classes" />
+	<property name="deploy.dir" value="D:\apache-tomcat-8.0.28\webapps" />
+	<property name="dist.dir" value="dist" />
+	<property  name="meta.dir"   value="META-INF"/>
+
+	<path id="classpath">
+		<fileset dir="C:\Program Files\Java\jdk1.8.0_92\lib" includes="tools.jar"/>
+		
+		<fileset dir="${web.dir}/WEB-INF/classes">
+			<include name="*.class"/>
+		</fileset>
+		<fileset dir="${web.dir}/WEB-INF/lib">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="D:\apache-tomcat-8.0.28\lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+   
+    <target name="clean" description="description:clean the dir">
+    	<echo message="Cleaning up folders"/>
+    	<delete dir="${build.dir}"/>
+	<delete dir="${dist.dir}"/>
+    </target>
+
+    <target name="prepare" depends="clean">
+    	<echo message="Prepare Folders"/>
+    	<mkdir dir="${build.dir}"/>
+    	<mkdir dir="${dist.dir}"/>
+	<mkdir  dir="${build.dir}/${meta.dir}"/>
+
+    	<copy todir="${build.dir}/${meta.dir}">
+    		<fileset dir="${src.dir}/${meta.dir}">
+    			<include name="*.xml"/>
+    		</fileset>
+    	</copy>
+    </target>
+	
+	<target name="compile" depends="prepare">
+		<javac srcdir="${src.dir}"     destdir="${build.dir}">
+		         	<classpath refid="classpath"/>
+		 </javac>
+	</target>
+
+	<target name="war" depends="compile">
+		<war destfile="${dist.dir}/${ant.project.name}.war" 
+			webxml="${web.dir}/WEB-INF/web.xml">
+			<fileset dir="${web.dir}">
+				<include name="**/*.*"/>
+			</fileset>
+			<!--  fileset dir="${build.dir}" includes="**/*.*"/-->
+		</war>
+	</target>
+	
+	<target name="deploy" depends="war">
+		<copy file="${dist.dir}/${ant.project.name}.war"
+			todir="${deploy.dir}"></copy>
+	</target>
+ 
+</project>
