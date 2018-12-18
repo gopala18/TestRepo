@@ -13,5 +13,11 @@ A quote by Charles Darwin says,
 
 “It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.” 
                                                                                           —Charles Darwin
-Adopting to DevOps culture is just like being responsive to changes. DevOps is not an end solution but, it's a journey to acheive maximum automation in our development process.
+Adopting to DevOps culture is just like being responsive to changes. DevOps is not an end solution but, it's a journey to acheive maximum automation in software development process. Tools of DevOps is also evolving to satisfy the requirement of clients with minimal time delay.
+
+As a result of this evalution the Operation team will have minimal communication with Development team.
+
+
+To conclude, NoOps follows the same standards and culture of DevOps,it's not the end of DevOps instead it could be an evolution: a new way to approach the development process which will bring important changes but it will not totally untie development from operations.
+
 
