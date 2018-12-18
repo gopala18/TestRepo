@@ -7,7 +7,7 @@ NoOps  - Development without Operations team
 
                                                                                           
 
-Its nearly a decade since Patrick Debios coined the term DevOps, still the world of Information Teachnology investing more to adopt DevOps in their software development process. In the journey of Software Development with DevOps process there are tools which will handles the majority of operations for us, but still requires some interaction by operations staff.
+Its nearly a decade since Patrick Debios coined the term DevOps, still the world of Information Teachnology investing more to adopt DevOps practice in their software development process. In the journey of Software Development with DevOps process there are tools which will handles the majority of operations for us, but still requires some interaction by operations staff.
 
 A quote by Charles Darwin says,
 
@@ -15,7 +15,9 @@ A quote by Charles Darwin says,
                                                                                           —Charles Darwin
 Adopting to DevOps culture is just like being responsive to changes. DevOps is not an end solution but, it's a journey to acheive maximum automation in software development process. Tools of DevOps is also evolving to satisfy the requirement of clients with minimal time delay.
 
-As a result of this evalution the Operation team will have minimal communication with Development team.
+As a result of this evalution the Operation team will have minimal communication with Development team, which is what we address with the name NoOps. It is considered as an highest acheivment of DevOps practicioners to automate majority of the work by Operation team.
+
+Over time, the DevOps practioners realized they could build better software faster by including members from all areas of business, including QA, security, marketing, and finance. And the community continues to learn and evolve by sharing ideas.
 
 
 To conclude, NoOps follows the same standards and culture of DevOps,it's not the end of DevOps instead it could be an evolution: a new way to approach the development process which will bring important changes but it will not totally untie development from operations.
