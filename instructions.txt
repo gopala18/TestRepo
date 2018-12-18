@@ -5,10 +5,13 @@ Is NoOps an End of DevOps?
 DevOps - Development and Operations team
 NoOps  - Development without Operations team 
 
-“It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.” 
-                                                                                          —Charles Darwin
                                                                                           
 
-Its nearly a decade since Patrick Debios coined the term DevOps by naming a conference "devopsdays", still the world of Information Teachnology invest more to adopt DevOps in their software development process. In the journey of Software Development with DevOps process 
-software as a service (SaaS) will handles the majority of operations for us, but still requires some interaction by operations staff.
+Its nearly a decade since Patrick Debios coined the term DevOps, still the world of Information Teachnology investing more to adopt DevOps in their software development process. In the journey of Software Development with DevOps process there are tools which will handles the majority of operations for us, but still requires some interaction by operations staff.
+
+A quote by Charles Darwin says,
+
+“It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change.” 
+                                                                                          —Charles Darwin
+Adopting to DevOps culture is just like being responsive to changes. DevOps is not an end solution but, it's a journey to acheive maximum automation in our development process.
 
